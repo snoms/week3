@@ -7,14 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC1954551C775F920027B215 /* madlib0_simple.txt in Resources */ = {isa = PBXBuildFile; fileRef = CC1954501C775F920027B215 /* madlib0_simple.txt */; };
+		CC1954561C775F920027B215 /* madlib1_tarzan.txt in Resources */ = {isa = PBXBuildFile; fileRef = CC1954511C775F920027B215 /* madlib1_tarzan.txt */; };
+		CC1954571C775F920027B215 /* madlib2_university.txt in Resources */ = {isa = PBXBuildFile; fileRef = CC1954521C775F920027B215 /* madlib2_university.txt */; };
+		CC1954581C775F920027B215 /* madlib3_clothes.txt in Resources */ = {isa = PBXBuildFile; fileRef = CC1954531C775F920027B215 /* madlib3_clothes.txt */; };
+		CC1954591C775F920027B215 /* madlib4_dance.txt in Resources */ = {isa = PBXBuildFile; fileRef = CC1954541C775F920027B215 /* madlib4_dance.txt */; };
 		E216884F1C7601BB00D138CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E216884E1C7601BB00D138CD /* AppDelegate.swift */; };
 		E21688511C7601BB00D138CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21688501C7601BB00D138CD /* ViewController.swift */; };
 		E21688541C7601BB00D138CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E21688521C7601BB00D138CD /* Main.storyboard */; };
 		E21688561C7601BB00D138CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E21688551C7601BB00D138CD /* Assets.xcassets */; };
 		E21688591C7601BB00D138CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E21688571C7601BB00D138CD /* LaunchScreen.storyboard */; };
+		E21688611C7602F400D138CD /* InputscreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21688601C7602F400D138CD /* InputscreenViewController.swift */; };
+		E21688631C76030600D138CD /* ResultscreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21688621C76030600D138CD /* ResultscreenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CC1954501C775F920027B215 /* madlib0_simple.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = madlib0_simple.txt; sourceTree = "<group>"; };
+		CC1954511C775F920027B215 /* madlib1_tarzan.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = madlib1_tarzan.txt; sourceTree = "<group>"; };
+		CC1954521C775F920027B215 /* madlib2_university.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = madlib2_university.txt; sourceTree = "<group>"; };
+		CC1954531C775F920027B215 /* madlib3_clothes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = madlib3_clothes.txt; sourceTree = "<group>"; };
+		CC1954541C775F920027B215 /* madlib4_dance.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = madlib4_dance.txt; sourceTree = "<group>"; };
 		E216884B1C7601BB00D138CD /* week3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = week3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E216884E1C7601BB00D138CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E21688501C7601BB00D138CD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +34,8 @@
 		E21688551C7601BB00D138CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E21688581C7601BB00D138CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E216885A1C7601BB00D138CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E21688601C7602F400D138CD /* InputscreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputscreenViewController.swift; sourceTree = "<group>"; };
+		E21688621C76030600D138CD /* ResultscreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultscreenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,9 +68,16 @@
 		E216884D1C7601BB00D138CD /* week3 */ = {
 			isa = PBXGroup;
 			children = (
+				CC1954501C775F920027B215 /* madlib0_simple.txt */,
+				CC1954511C775F920027B215 /* madlib1_tarzan.txt */,
+				CC1954521C775F920027B215 /* madlib2_university.txt */,
+				CC1954531C775F920027B215 /* madlib3_clothes.txt */,
+				CC1954541C775F920027B215 /* madlib4_dance.txt */,
 				E216884E1C7601BB00D138CD /* AppDelegate.swift */,
 				E21688501C7601BB00D138CD /* ViewController.swift */,
 				E21688521C7601BB00D138CD /* Main.storyboard */,
+				E21688601C7602F400D138CD /* InputscreenViewController.swift */,
+				E21688621C76030600D138CD /* ResultscreenViewController.swift */,
 				E21688551C7601BB00D138CD /* Assets.xcassets */,
 				E21688571C7601BB00D138CD /* LaunchScreen.storyboard */,
 				E216885A1C7601BB00D138CD /* Info.plist */,
@@ -96,6 +117,7 @@
 				TargetAttributes = {
 					E216884A1C7601BB00D138CD = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 9B4995VYB9;
 					};
 				};
 			};
@@ -123,7 +145,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E21688591C7601BB00D138CD /* LaunchScreen.storyboard in Resources */,
+				CC1954581C775F920027B215 /* madlib3_clothes.txt in Resources */,
+				CC1954561C775F920027B215 /* madlib1_tarzan.txt in Resources */,
 				E21688561C7601BB00D138CD /* Assets.xcassets in Resources */,
+				CC1954551C775F920027B215 /* madlib0_simple.txt in Resources */,
+				CC1954571C775F920027B215 /* madlib2_university.txt in Resources */,
+				CC1954591C775F920027B215 /* madlib4_dance.txt in Resources */,
 				E21688541C7601BB00D138CD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,7 +162,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E21688611C7602F400D138CD /* InputscreenViewController.swift in Sources */,
 				E21688511C7601BB00D138CD /* ViewController.swift in Sources */,
+				E21688631C76030600D138CD /* ResultscreenViewController.swift in Sources */,
 				E216884F1C7601BB00D138CD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -249,10 +278,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = week3/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = nl.mprog.week3;
+				PRODUCT_BUNDLE_IDENTIFIER = nl.mprog.week3mbpb;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -260,10 +292,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = week3/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = nl.mprog.week3;
+				PRODUCT_BUNDLE_IDENTIFIER = nl.mprog.week3mbpb;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -286,6 +321,7 @@
 				E216885F1C7601BB00D138CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

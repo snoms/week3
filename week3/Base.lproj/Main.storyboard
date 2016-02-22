@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Mvo-Vk-zns">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="week3" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,173 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="mcV-WV-6Qa">
+                                <rect key="frame" x="0.0" y="64" width="560" height="580"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="mad" translatesAutoresizingMaskIntoConstraints="NO" id="eTX-sG-3H1">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="0.0"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="face" translatesAutoresizingMaskIntoConstraints="NO" id="3bB-Wx-gzc">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="240"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="libs" translatesAutoresizingMaskIntoConstraints="NO" id="zLD-cj-ev0">
+                                        <rect key="frame" x="0.0" y="240" width="560" height="290"/>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zKf-KL-607">
+                                        <rect key="frame" x="0.0" y="530" width="549" height="50"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <string key="text">Welcome to MadLibs! You will be asked to fill in several words to complete a story. After completing this your personal frankenstory will be presented to you. Have fun!</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mcV-WV-6Qa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="0WU-1D-B2D"/>
+                            <constraint firstItem="mcV-WV-6Qa" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="FVW-VV-pBE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mcV-WV-6Qa" secondAttribute="trailing" id="YGf-Zl-d50"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="mcV-WV-6Qa" secondAttribute="bottom" id="YWD-dY-vbr"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="J4X-qi-Ix4">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="8pk-Ce-VO1">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="M7c-Y3-nch">
+                                <rect key="frame" x="496" y="7" width="84" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Get Started!"/>
+                                <connections>
+                                    <segue destination="hFI-fs-AD1" kind="show" identifier="loadSegue" id="d2b-XZ-LTT"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="549" y="-243"/>
+        </scene>
+        <!--Inputscreen View Controller-->
+        <scene sceneID="Dpe-g9-Dhz">
+            <objects>
+                <viewController id="hFI-fs-AD1" customClass="InputscreenViewController" customModule="week3" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aNV-by-Z51"/>
+                        <viewControllerLayoutGuide type="bottom" id="Dgf-29-cZZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8kl-ga-6af">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jfE-LK-fba">
+                                <rect key="frame" x="20" y="220" width="266" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter a word of the following class:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bmD-Od-zdh">
+                                <rect key="frame" x="20" y="126" width="266" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KSa-V3-vqq">
+                                <rect key="frame" x="20" y="164" width="266" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kcj-G8-48K">
+                                <rect key="frame" x="116" y="273" width="75" height="30"/>
+                                <state key="normal" title="Next word!"/>
+                                <connections>
+                                    <action selector="wordButton:" destination="hFI-fs-AD1" eventType="touchUpInside" id="AAH-UJ-Z4i"/>
+                                    <segue destination="o0S-Po-hlo" kind="show" identifier="resultSegue" id="61G-JF-LOy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="inputField" destination="jfE-LK-fba" id="ugW-Pa-lVR"/>
+                        <outlet property="instructionLabel" destination="bmD-Od-zdh" id="Gik-lL-wOF"/>
+                        <outlet property="wordButtonOutlet" destination="Kcj-G8-48K" id="Tbs-aC-UPj"/>
+                        <outlet property="wordClassLabel" destination="KSa-V3-vqq" id="mH6-KT-1eN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SkW-hP-dGl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1262" y="-243"/>
+        </scene>
+        <!--Resultscreen View Controller-->
+        <scene sceneID="JUO-7k-yyz">
+            <objects>
+                <viewController id="o0S-Po-hlo" customClass="ResultscreenViewController" customModule="week3" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LNF-AA-4GD"/>
+                        <viewControllerLayoutGuide type="bottom" id="Y9H-pv-ytO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="H6w-Yl-vGd">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="resultField" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fWL-of-doD">
+                                <rect key="frame" x="20" y="67" width="273" height="452"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bcO-BG-deY">
+                                <rect key="frame" x="134" y="527" width="44" height="30"/>
+                                <state key="normal" title="Reset!"/>
+                                <connections>
+                                    <action selector="resetButton:" destination="o0S-Po-hlo" eventType="touchUpInside" id="5cs-Pu-C81"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="CTj-N7-pFL"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Here's your story! :)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4CW-X2-HQg">
+                                <rect key="frame" x="81" y="38" width="151" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="resultField" destination="fWL-of-doD" id="p3c-l6-EsO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uW8-MO-djN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1262" y="500"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Zhd-nv-kFC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Mvo-Vk-zns" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="TPu-PQ-OyK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="63V-jb-MrU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="laD-fe-VZO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-180" y="-243"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="face" width="320" height="290"/>
+        <image name="libs" width="590" height="290"/>
+        <image name="mad" width="600" height="300"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="CTj-N7-pFL"/>
+    </inferredMetricsTieBreakers>
 </document>
