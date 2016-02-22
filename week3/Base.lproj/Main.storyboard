@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -18,20 +19,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="mcV-WV-6Qa">
-                                <rect key="frame" x="0.0" y="64" width="560" height="580"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="mcV-WV-6Qa">
+                                <rect key="frame" x="0.0" y="28" width="560" height="580"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="mad" translatesAutoresizingMaskIntoConstraints="NO" id="eTX-sG-3H1">
-                                        <rect key="frame" x="0.0" y="0.0" width="560" height="0.0"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mad" translatesAutoresizingMaskIntoConstraints="NO" id="eTX-sG-3H1">
+                                        <rect key="frame" x="155" y="0.0" width="250" height="134"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="eTX-sG-3H1" secondAttribute="height" multiplier="28:15" id="TVa-bb-t8h"/>
+                                            <constraint firstAttribute="width" constant="250" id="mi6-2b-sbP"/>
+                                        </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="face" translatesAutoresizingMaskIntoConstraints="NO" id="3bB-Wx-gzc">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="240"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="face" translatesAutoresizingMaskIntoConstraints="NO" id="3bB-Wx-gzc">
+                                        <rect key="frame" x="200" y="134" width="160" height="120"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="3bB-Wx-gzc" secondAttribute="height" multiplier="4:3" id="aMw-BU-NCU"/>
+                                            <constraint firstAttribute="width" constant="160" id="hRL-HE-rjL"/>
+                                        </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="libs" translatesAutoresizingMaskIntoConstraints="NO" id="zLD-cj-ev0">
-                                        <rect key="frame" x="0.0" y="240" width="560" height="290"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="libs" translatesAutoresizingMaskIntoConstraints="NO" id="zLD-cj-ev0">
+                                        <rect key="frame" x="155" y="254" width="250" height="129"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="250" id="8UE-2Y-yjm"/>
+                                            <constraint firstAttribute="width" secondItem="zLD-cj-ev0" secondAttribute="height" multiplier="56:29" id="8lZ-zd-yNw"/>
+                                        </constraints>
                                     </imageView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zKf-KL-607">
-                                        <rect key="frame" x="0.0" y="530" width="549" height="50"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zKf-KL-607">
+                                        <rect key="frame" x="6" y="383" width="549" height="197"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <string key="text">Welcome to MadLibs! You will be asked to fill in several words to complete a story. After completing this your personal frankenstory will be presented to you. Have fun!</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -77,31 +90,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jfE-LK-fba">
-                                <rect key="frame" x="20" y="220" width="266" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter a word of the following class:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bmD-Od-zdh">
-                                <rect key="frame" x="20" y="126" width="266" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KSa-V3-vqq">
-                                <rect key="frame" x="20" y="164" width="266" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kcj-G8-48K">
-                                <rect key="frame" x="116" y="273" width="75" height="30"/>
-                                <state key="normal" title="Next word!"/>
-                                <connections>
-                                    <action selector="wordButton:" destination="hFI-fs-AD1" eventType="touchUpInside" id="AAH-UJ-Z4i"/>
-                                    <segue destination="o0S-Po-hlo" kind="show" identifier="resultSegue" id="61G-JF-LOy"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="D4g-Bl-l4H">
+                                <rect key="frame" x="20" y="126" width="266" height="192"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Enter a word of the following class:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bmD-Od-zdh">
+                                        <rect key="frame" x="0.0" y="0.0" width="266" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KSa-V3-vqq">
+                                        <rect key="frame" x="112" y="51" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jfE-LK-fba">
+                                        <rect key="frame" x="8" y="102" width="250" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="250" id="BDO-IC-yOl"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kcj-G8-48K">
+                                        <rect key="frame" x="96" y="162" width="75" height="30"/>
+                                        <state key="normal" title="Next word!"/>
+                                        <connections>
+                                            <action selector="wordButton:" destination="hFI-fs-AD1" eventType="touchUpInside" id="AAH-UJ-Z4i"/>
+                                            <segue destination="o0S-Po-hlo" kind="show" identifier="resultSegue" id="61G-JF-LOy"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -128,26 +149,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="resultField" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fWL-of-doD">
-                                <rect key="frame" x="20" y="67" width="273" height="452"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bcO-BG-deY">
-                                <rect key="frame" x="134" y="527" width="44" height="30"/>
-                                <state key="normal" title="Reset!"/>
-                                <connections>
-                                    <action selector="resetButton:" destination="o0S-Po-hlo" eventType="touchUpInside" id="5cs-Pu-C81"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="CTj-N7-pFL"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Here's your story! :)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4CW-X2-HQg">
-                                <rect key="frame" x="81" y="38" width="151" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="fillProportionally" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="dwv-Fm-0CE">
+                                <rect key="frame" x="20" y="89" width="273" height="454"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Here's your story! :)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4CW-X2-HQg">
+                                        <rect key="frame" x="61" y="0.0" width="151" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" text="resultField" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fWL-of-doD">
+                                        <rect key="frame" x="0.0" y="36" width="273" height="328"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VwT-EA-O8q">
+                                        <rect key="frame" x="56" y="379" width="161" height="30"/>
+                                        <state key="normal" title="Copy story to clipboard"/>
+                                        <connections>
+                                            <action selector="copyStory:" destination="o0S-Po-hlo" eventType="touchUpInside" id="D1A-Nq-7fz"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bcO-BG-deY">
+                                        <rect key="frame" x="115" y="424" width="44" height="30"/>
+                                        <state key="normal" title="Reset!"/>
+                                        <connections>
+                                            <action selector="resetButton:" destination="o0S-Po-hlo" eventType="touchUpInside" id="5cs-Pu-C81"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="CTj-N7-pFL"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>

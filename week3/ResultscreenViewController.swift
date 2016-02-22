@@ -15,6 +15,9 @@ class ResultscreenViewController: UIViewController {
     @IBAction func resetButton(sender: AnyObject) {
     }
     
+    @IBAction func copyStory(sender: AnyObject) {
+        UIPasteboard.generalPasteboard().string = String(resultArray)
+    }
     
     @IBOutlet weak var resultField: UITextView!
     

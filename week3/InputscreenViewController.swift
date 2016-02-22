@@ -29,14 +29,11 @@ class InputscreenViewController: UIViewController {
     var targetCount = 0
     // placeholder location array
     var targetLocation = [Int]()
-    // 
+    // segue-readiness bool
     var readyForSegue = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(passedArray[3])
-        
-        // Do any additional setup after loading the view.
         for (index, word) in passedArray.enumerate() {
             if word.hasPrefix("<") && word.hasSuffix(">") {
                 ++targetCount
@@ -44,11 +41,7 @@ class InputscreenViewController: UIViewController {
                 targetLocation.append(index)
             }
         }
-        print(wordClassArray)
-        print(targetLocation)
         for (index, word) in wordClassArray.enumerate() {
-            wordClassArray[index] = String(word.characters.dropFirst())
-            wordClassArray[index] = String(word.characters.dropLast())
             wordClassArray[index] = word.lowercaseString
         }
         print(targetCount)
@@ -65,34 +58,18 @@ class InputscreenViewController: UIViewController {
         if (inputField.text != "")
         {
             wordArray.append(inputField.text!)
-            
+
             if (wordCount < (targetCount)) {
                 ++wordCount
                 wordClassLabel.text = wordClassArray[wordCount-1]
-                
                 let target = targetLocation[wordCount-1]
-                
-                print("target: \(target)")
-                print(passedArray)
                 passedArray[target] = inputField.text!
-                inputField.text = "DEBUGTEXT"
-                print("wordcount: \(wordCount)")
+                inputField.text = ""
             }
             if (wordCount == targetCount)
             {
                 readyForSegue = true
                 wordButtonOutlet.setTitle("See result!", forState: UIControlState.Normal)
-                //inputField.hidden = true
-//                var resultString = passedArray.joinWithSeparator(" ")
-//                //wordClassLabel.hidden = true
-//                print("array entered words: \(wordArray)")
-//                
-//                let partialResult:String = resultString.stringByReplacingOccurrencesOfString(" .", withString: ".")
-//
-//                let finalResult:String = partialResult.stringByReplacingOccurrencesOfString(" ,", withString: ",")
-//                print(finalResult)
-                
-                //print(passedArray)
             }
         }
             
@@ -107,31 +84,17 @@ class InputscreenViewController: UIViewController {
             //show alert
             presentViewController(notxtAlert, animated: true, completion: nil)
         }
-        
     }
 
-    
     override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
         if (segue.identifier == "resultSegue") {
             var svc = segue!.destinationViewController as! ResultscreenViewController
-            //            print("index 1 of textArray pre edit: \(textArray[1])")
-            //            textArray[1] = "test"
-            //            print("index 1 of textArray post edit: \(textArray[1])")
-            //            print("modified textarray .......................")
-            //            print(textArray)
             var resultString = passedArray.joinWithSeparator(" ")
-            //wordClassLabel.hidden = true
-            print("array entered words: \(wordArray)")
-            
             let partialResult:String = resultString.stringByReplacingOccurrencesOfString(" .", withString: ".")
-            
             let finalResult:String = partialResult.stringByReplacingOccurrencesOfString(" ,", withString: ",")
-            print(finalResult)
             svc.resultArray = finalResult
         }
     }
-    
-    
     
     override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
         return readyForSegue
